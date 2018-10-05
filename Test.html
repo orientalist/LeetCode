@@ -1,0 +1,38 @@
+<h1>Test</h1>
+
+<script>
+    var testFunction=function(){    
+        var str="";             
+        for(be=0;be<10;be++){            
+            if(be%2==0){
+                str+="K";                
+            }
+            else{
+                break;
+            }         
+        }        
+        console.log(str);
+    }    
+    var CharacterRepeat=function(str,cha){        
+        for(be=0;be<str.length;be++){            
+            if(str[be]===cha){
+                return true;
+                break;
+            }               
+        }
+        return false;
+    }
+    var StringAppend=function(){
+        var str="";
+        for(be=0;be<=10;be++){
+            str+="Q";
+            CountLength(str);
+        }
+    }
+    var CountLength=function(str){
+        console.log(str.length);
+    }
+    StringAppend();
+</script>
+
+

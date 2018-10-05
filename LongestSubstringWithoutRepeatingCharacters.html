@@ -1,0 +1,36 @@
+<h1>Shitt</h1>
+
+<script>
+    var lengthOfLongestSubstring = function(s) {          
+        var BiggestNum=0;
+        for(be=0;be<s.length;be++){            
+            var subString="";
+            subString+=s[be];            
+            var length=1;                               
+            for(be2=be+1;be2<s.length;be2++){                            
+                if(!CharacterRepeat(subString,s[be2])){
+                    subString+=s[be2];
+                    length++;                                                            
+                }
+                else{
+                    break;
+                }                         
+            }                     
+            if(length>BiggestNum){
+                BiggestNum=length;
+            }
+        }        
+        return BiggestNum;
+    };
+
+    var CharacterRepeat=function(str,cha){                
+        for(be3=0;be3<str.length;be3++){            
+            if(str[be3]===cha){
+                return true;
+                break;
+            }               
+        }
+        return false;
+    }
+    lengthOfLongestSubstring('pwwkew');
+</script>

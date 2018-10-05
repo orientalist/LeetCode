@@ -1,0 +1,29 @@
+<h1>Shit</h1>
+
+<script>    
+    var FirstNum=0;
+    var SecondNum=0;
+    var base=1;   
+    var addTwoNumbers = function(l1, l2) {
+
+        if(l1.next){
+            FirstNum+=l1.val*base;        
+            base=base*10;                    
+            GetVal(l1.next,base,FirstNum);
+        }    
+        return FirstNum;
+
+        var GetVal=function (list,base,SumResult){
+            alert(SumResult);
+            var lestList=list;    
+            if(lestList.next){
+                lestList=list.next;
+                SumResult+=list.val*base;
+                base=base*10;        
+                GetVal(lestList,base,SumResult);
+            }
+        }
+    };    
+    console.log(addTwoNumbers([2,4,3],[5,6,4]));
+
+</script>
