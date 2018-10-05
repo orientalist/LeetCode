@@ -1,0 +1,61 @@
+<h1>Median of Two Sorted Arrays</h1>
+
+<script>    
+    var findMedianSortedArrays = function (nums1, nums2) {
+        var combinedArray = [];
+        
+        if(nums1.length==0||nums2.length==0){
+            if(nums1.length==0&&nums2.length!=0){
+                combinedArray=nums2;
+            }
+            else if(nums1.length!=0&&nums2.length==0){
+                combinedArray=nums1;
+            }
+            else{
+                combinedArray=[];
+            }
+        }
+        else{
+            combinedArray = CombineArray(nums1, nums2);
+        }
+        
+        if (combinedArray.length % 2 != 0) {
+            console.log(combinedArray[Math.floor(combinedArray.length / 2)]);
+            return combinedArray[Math.floor(combinedArray.length / 2)];
+        }
+        else {
+            console.log(((combinedArray[combinedArray.length / 2 - 1]) + (combinedArray[combinedArray.length / 2])) / 2);
+            return ((combinedArray[combinedArray.length / 2 - 1]) + (combinedArray[combinedArray.length / 2])) / 2;
+        }
+    };
+    var CombineArray = function (arr1, arr2) {
+        for (be = 0; be < arr2.length; be++) {
+            InsertArray(arr2[be], arr1);
+        }
+        return arr1;
+    }
+
+    var InsertArray = function (num, arr) {
+        var headIndex = 0;
+        for (be2 = 0; be2 < arr.length; be2++) {
+            if (be2 != arr.length - 1) {
+                if (num >= arr[be2] && num <= arr[be2 + 1]) {
+                    arr.splice(be2 + 1, 0, num);
+                    break;
+                }
+            }
+            else {
+                if (num >= arr[be2]) {
+                    arr[arr.length] = num;
+                    break;
+                }
+                else {
+                    arr.splice(headIndex, 0, num);
+                    headIndex++;
+                    break;
+                }
+            }
+        }
+    }
+    findMedianSortedArrays([], [1, 2, 3, 4]);
+</script>

@@ -16,5 +16,11 @@
             "name": "Test",            
             "file": "${workspaceFolder}/Test.html"
         }
+        ,{
+            "type": "chrome",
+            "request": "launch",
+            "name": "Median of Two Sorted Arrays",            
+            "file": "${workspaceFolder}/MedianofTwoSortedArrays.html"
+        }        
     ]
 }
