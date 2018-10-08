@@ -22,5 +22,17 @@
             "name": "Median of Two Sorted Arrays",            
             "file": "${workspaceFolder}/MedianofTwoSortedArrays.html"
         }        
+        ,{
+            "type": "chrome",
+            "request": "launch",
+            "name": "3Sum",            
+            "file": "${workspaceFolder}/35Sum.html"
+        }  
+        ,{
+            "type": "chrome",
+            "request": "launch",
+            "name": "3Sum2",            
+            "file": "${workspaceFolder}/3Sum.html"
+        }          
     ]
 }
