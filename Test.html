@@ -32,7 +32,50 @@
     var CountLength=function(str){
         console.log(str.length);
     }
-    StringAppend();
+    var ReverseNegativeArray=function(nums){
+        var id=0;
+        var tempArr=[];
+        while(nums[id]<0){
+            tempArr[id]=parseInt(-nums[id]);
+            id++;
+        }
+        console.log("original array");
+        console.log(tempArr);
+        alert(tempArr);
+        console.log("---------------------------------");
+        console.log("sorted array");
+        console.log(tempArr.sort());
+        alert(tempArr.sort());
+        console.log("---------------------------------");
+        console.log("reversed array");
+        console.log(tempArr.reverse());
+        alert(tempArr.reverse());
+        console.log("---------------------------------");
+        console.log(tempArr);
+    }
+    //ReverseNegativeArray([-7,-5,-9,-11,-20,-5,-4,-1,-17]);
+    var SortPositiveArray=function(nums){
+        console.log("original array");
+        console.log(nums);
+        alert(nums);
+        console.log("-------------------");
+        console.log("sorted array");
+        console.log(nums.sort());
+        alert(nums.sort());
+        console.log("-------------------");
+        console.log("reversed array");
+        console.log(nums.reverse());
+        alert(nums.reverse());
+        console.log("-------------------");
+    }
+    //SortPositiveArray([11,0,1,8,7,9,10,4,5,9]);
+    var SortArray=function(nums){
+        console.log(nums.sort(sortNumbers));
+    }
+    var sortNumbers=function(a,b){
+        return a-b;
+    }
+    SortArray([-9,0,1,10,-5,4,11,12,-4,0,1,-7]);
 </script>
 
 
